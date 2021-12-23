@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 50px;
+}
+
+div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-right: 130px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.btn {
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 19px;
+  margin: 10px 0;
+  width: 90px;
+  height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btn.large {
+  width: 120px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.btn.small {
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.btn.shadow {
+  -webkit-box-shadow: 0 10px 10px gray;
+          box-shadow: 0 10px 10px gray;
+  -webkit-transition: -webkit-box-shadow 500ms;
+  transition: -webkit-box-shadow 500ms;
+  transition: box-shadow 500ms;
+  transition: box-shadow 500ms, -webkit-box-shadow 500ms;
+}
+
+.btn.shadow:focus, .btn.shadow:hover {
+  -webkit-box-shadow: 0 10px 10px -5px gray;
+          box-shadow: 0 10px 10px -5px gray;
+}
+
+.btn--success {
+  background: #2b9348;
+  color: white;
+}
+
+.btn--success:focus, .btn--success:hover {
+  background: #1f6c35;
+}
+
+.btn--success.outline {
+  background: transparent;
+  border: 2px solid #2b9348;
+  color: #2b9348;
+}
+
+.btn--success.outline:focus, .btn--success.outline:hover {
+  background: transparent;
+  border-color: #144421;
+  color: #144421;
+}
+
+.btn--danger {
+  background: #ff595e;
+  color: white;
+}
+
+.btn--danger:focus, .btn--danger:hover {
+  background: #ff262d;
+}
+
+.btn--danger.outline {
+  background: transparent;
+  border: 2px solid #ff595e;
+  color: #ff595e;
+}
+
+.btn--danger.outline:focus, .btn--danger.outline:hover {
+  background: transparent;
+  border-color: #f20007;
+  color: #f20007;
+}
+
+.btn--alert {
+  background: #ffca3a;
+  color: white;
+}
+
+.btn--alert:focus, .btn--alert:hover {
+  background: #ffbc07;
+}
+
+.btn--alert.outline {
+  background: transparent;
+  border: 2px solid #ffca3a;
+  color: #ffca3a;
+}
+
+.btn--alert.outline:focus, .btn--alert.outline:hover {
+  background: transparent;
+  border-color: #d39a00;
+  color: #d39a00;
+}
+
+.btn--info {
+  background: #06d6a0;
+  color: white;
+}
+
+.btn--info:focus, .btn--info:hover {
+  background: #05a47b;
+}
+
+.btn--info.outline {
+  background: transparent;
+  border: 2px solid #06d6a0;
+  color: #06d6a0;
+}
+
+.btn--info.outline:focus, .btn--info.outline:hover {
+  background: transparent;
+  border-color: #037356;
+  color: #037356;
+}
+
+.btn--action {
+  background: #1982c4;
+  color: white;
+}
+
+.btn--action:focus, .btn--action:hover {
+  background: #136497;
+}
+
+.btn--action.outline {
+  background: transparent;
+  border: 2px solid #1982c4;
+  color: #1982c4;
+}
+
+.btn--action.outline:focus, .btn--action.outline:hover {
+  background: transparent;
+  border-color: #0d466a;
+  color: #0d466a;
+}
+/*# sourceMappingURL=style.css.map */

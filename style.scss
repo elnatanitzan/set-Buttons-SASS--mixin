@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
+h3 {
+margin-top: 50px;
+}
+
+div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 130px;
+  flex-wrap: wrap;
+  
+}
+
+// colors:
+$color-success: #2b9348;
+$color-danger: #ff595e;
+$color-alert: #ffca3a;
+$color-accent: #06d6a0;
+$color-action: #1982c4;
+$color-primary: #6a4c93;
+$color-black: black;
+$color-white: white;
+
+// buttons size:
+$large-width: 120px;
+$large-heigth: 50px;
+$small-width: 70px;
+$small-heigth: 30px;
+$normal-width: 90px;
+$normal-heigth: 40px;
+
+// font size:
+$large-font: 25px;
+$small-font: 14px;
+$normal-font: 19px;
+
+// @mixin for Buttons size:
+@mixin btnSize($width, $heigth: $width) {
+  width: $width;
+  height: $heigth;
+}
+
+// @mixin for Buttons Style:
+@mixin btnStyle($color, $textColor, $isOutline: false) {
+  @if $isOutline {
+    background: transparent;
+    border: 2px solid $color;
+    color: $color;
+  
+    &:focus,
+    &:hover {
+      background: transparent;
+      border-color: darken($color, 20%);
+      color: darken($color, 20%);
+    }  
+  } @else {
+    background: $color;
+    color: $textColor;
+    
+    &:focus,
+    &:hover {
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.btn {
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: $normal-font;
+  margin: 10px 0;
+  @include btnSize($normal-width, $normal-heigth);
+  user-select: none;
+  appearance: none;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+  
+  &.large {
+    @include btnSize($large-width, $large-heigth);   
+    font-size: $large-font;
+  }
+  
+  &.small {
+    @include btnSize($small-width, $small-heigth);   
+    font-size: $small-font;
+  }
+  
+  &.shadow {
+    box-shadow: 0 10px 10px lighten($color-black, 50%);
+    transition: box-shadow 500ms;
+    
+    &:focus,
+    &:hover {
+      box-shadow: 0 10px 10px -5px lighten($color-black, 50%);
+    }
+  }
+  
+
+  &--success { 
+    @include btnStyle($color-success, $color-white);
+    &.outline { @include btnStyle($color-success, $color-white, true); }
+  }
+  
+  &--danger {
+    @include btnStyle($color-danger, $color-white);
+    &.outline { @include btnStyle($color-danger, $color-white, true); }
+  }
+  
+  &--alert {
+    @include btnStyle($color-alert, $color-white);
+    &.outline { @include btnStyle($color-alert, $color-white, true); }  
+  }
+  
+  &--info {
+    @include btnStyle($color-accent, $color-white);
+    &.outline { @include btnStyle($color-accent, $color-white, true); }  
+  }
+  
+  &--action {
+    @include btnStyle($color-action, $color-white);
+    &.outline { @include btnStyle($color-action, $color-white, true); }  
+  }
+} 
